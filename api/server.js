@@ -28,9 +28,9 @@ server.use(express.json());
 server.use(cors());
 server.use(session(sessionConfig));
 
-server.use("/api/users/register", registerRouter);
-server.use("/api/users/login", loginRouter);
-server.use("/api/users/logout", logoutRouter);
+server.use("/api/register", registerRouter);
+server.use("/api/login", loginRouter);
+server.use("/api/logout", logoutRouter);
 server.use("/api/users", authenticator, usersRouter);
 
 server.get("/", (req, res) => {
